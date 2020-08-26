@@ -5,7 +5,7 @@ let faceUser = false;
 let constraints = {
   audio: false,
   video: true,
-  { exact: (faceUser ? "user" : "environment")},
+  exact: (faceUser ? "user" : "environment"),
 };
 
 function handleSuccess(stream) {
