@@ -5,7 +5,7 @@ let faceUser = true;
 let constraints = {
   audio: false,
   video: true,
-  facingMode: faceUser ? "user" : "environment",
+  facingMode:{ exact: (faceUser ? "user" : "environment")},
 };
 
 function handleSuccess(stream) {
@@ -30,7 +30,7 @@ document.querySelector(".change-camera").addEventListener("click", () => {
   constraints = {
     audio: false,
     video: true,
-    facingMode: faceUser ? "user" : "environment",
+    facingMode:{exact: (faceUser ? "user" : "environment")}
   };
   navigator.mediaDevices
     .getUserMedia(constraints)
