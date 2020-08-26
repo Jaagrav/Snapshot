@@ -1,11 +1,11 @@
 const video = document.querySelector(".videoStream");
 
 //Video Stream init
-let faceUser = true;
+let faceUser = false;
 let constraints = {
   audio: false,
   video: true,
-  facingMode:{ exact: (faceUser ? "user" : "environment")},
+  { exact: (faceUser ? "user" : "environment")},
 };
 
 function handleSuccess(stream) {
