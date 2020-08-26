@@ -4,8 +4,9 @@ const video = document.querySelector(".videoStream");
 let faceUser = false;
 let constraints = {
   audio: false,
-  video: true,
-  exact: (faceUser ? "user" : "environment"),
+  video: {
+      exact: (faceUser ? "Camera 0" : "Camera 1"),
+  }
 };
 
 function handleSuccess(stream) {
